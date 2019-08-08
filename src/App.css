@@ -6,8 +6,11 @@
   }
   
   html, body, #root {
-    background: #0052CC;
     height: 100%;
+  }
+
+  body {
+    background: #0052CC;
   }
   
   body, input, button {
