@@ -11,6 +11,7 @@ export default function Login() {
                 <img src={ logo } alt="Tindev logo" />
                 <input placeholder="Digite seu usuário do GitHub" />
                 <button type="submit">Enviar</button>
+                <a className="App-link" href="https://github.com/dsausen" target="_blank" rel="noopener noreferrer">Stay woke</a>
             </form>
         </div>
         // <div className="App">
