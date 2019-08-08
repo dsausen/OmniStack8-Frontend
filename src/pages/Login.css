@@ -18,7 +18,7 @@
   border-radius: 4px;
   height: 48px;
   padding: 0 20px;
-  font-size: 16px;
+  /* font-size: 16px; */
   color: #666;
 }
 
@@ -31,7 +31,7 @@
   border: 0;
   border-radius: 4px;
   height: 48px;
-  font-size: 16px;
+  /* font-size: 16px; */
   background: #df4723;
   font-weight: bold;
   color: #fff;
@@ -55,5 +55,7 @@
 .App-link {
   color: #61dafb;
   text-align: center;
+  font-weight: bold;
+  text-decoration: none;
   margin-top: 10px;
 }
