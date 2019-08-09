@@ -81,6 +81,11 @@
     margin-top: 300px;
 }
 
+.main-container a {
+    width: 150px;
+    align-self: center;
+}
+
 .react-logo {
     animation: react-logo infinite 20s linear;
     height: 10vmin;

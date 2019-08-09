@@ -6,7 +6,7 @@ import logoReact from "../assets/logoReact.svg";
 
 export default function Login({history}) {
     const [username, setUsername] = useState("");
-    
+
     async function handleSubmit(e) {
         e.preventDefault();
         const response = await api.post("/devs", {
@@ -36,12 +36,5 @@ export default function Login({history}) {
                 </a>
             </form>
         </div>
-        // <div className="App">
-        //     <header className="App-header">
-        //         <img src={ logo } className="App-logo" alt="Tindev logo" />
-        //         <p>Work in progress. Stay tuned.</p>
-        //         <a className="App-link" href="https://github.com/dsausen" target="_blank" rel="noopener noreferrer">Get woke</a>
-        //     </header>
-        // </div>
     );
 }

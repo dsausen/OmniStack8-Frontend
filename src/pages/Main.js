@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 import api from "../services/api";
 import logo from "../assets/logo.svg";
 import like from "../assets/like.svg";
@@ -12,21 +13,21 @@ export default function Main({match}) {
     useEffect(() => {
         async function loadUsers() {
             const response = await api.get("/devs", {
-                headers: {user: match.params.id}
-            });
+                headers: {user: match.params.id},
+            })
             setUsers(response.data);
         }
         loadUsers();
     }, [match.params.id]);
 
-    async function handleLikes(id) {
+    async function handleLike(id) {
         await api.post(`/devs/${id}/likes`, null, {
             headers: {user: match.params.id}
         })
         setUsers(users.filter(user => user._id !== id))
     }
 
-    async function handleDislikes(id) {
+    async function handleDislike(id) {
         await api.post(`/devs/${id}/dislikes`, null, {
             headers: {user: match.params.id}
         })
@@ -36,7 +37,9 @@ export default function Main({match}) {
     return (
         <div className="main-container">
             <img src={logoReact} className="react-logo" alt="React logo" />
-            <img src={logo} alt="Tindev logo" />
+            <Link to="/">
+                <img src={logo} className="tindev-logo" alt="Tindev logo" />
+            </Link>
             {users.length > 0 ? (
                 <ul>
                     {users.map(user => (
@@ -47,10 +50,10 @@ export default function Main({match}) {
                                 <p>{user.bio}</p>
                             </footer>
                             <div className="buttons">
-                                <button type="button" onClick={() => handleDislikes(user._id)}>
+                                <button type="button" onClick={() => handleDislike(user._id)}>
                                     <img src={dislike} alt="Dislike button" />
                                 </button>
-                                <button type="button" onClick={() => handleLikes(user._id)}>
+                                <button type="button" onClick={() => handleLike(user._id)}>
                                     <img src={like} alt="Like button" />
                                 </button>
                             </div>
