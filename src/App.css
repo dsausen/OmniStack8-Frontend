@@ -18,5 +18,5 @@ body, input, button {
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: calc(10px + 1.33vmin);
+  font-size: calc(10px + 1vmin);
 }

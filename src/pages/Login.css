@@ -38,9 +38,18 @@
   cursor: pointer;
 }
 
+.github-link {
+  color: #61dafb;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  width: 100px;
+  align-self: center;
+}
+
 .react-logo {
   animation: react-logo infinite 20s linear;
-  height: 25vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -50,12 +59,4 @@
   } to {
     transform: rotate(360deg);
   }
-}
-
-.App-link {
-  color: #61dafb;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 10px;
 }
